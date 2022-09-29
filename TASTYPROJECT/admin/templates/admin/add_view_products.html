@@ -56,6 +56,7 @@
                                     <th class="border-top-0">Name</th>
                                     <th class="border-top-0">Category</th>
                                     <th class="border-top-0">Price</th>
+                                    <th class="border-top-0">Is featured</th>
                                     <th class="border-top-0">Actions</th>
                                 </tr>
                             </thead>
@@ -67,6 +68,7 @@
                                     <td>{{list.name}}</td>
                                     <td>{{list.category}}</td>
                                     <td>ugx {{list.price}}</td>
+                                    <td>{{list.is_featured}}</td>
                                     <td>
                                         <a class="btn btn-primary" href="{% url 'admin:update-cake' list.id %}">Edit</a>
                                         <a class="btn btn-danger" href="{% url 'admin:delete-cake' list.id %}">Delete</a>

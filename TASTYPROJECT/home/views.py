@@ -7,7 +7,8 @@ from products.models import cake_list
 
 #Home page 
 def index(request):
-    data=cake_list.objects.all()
+    # data=cake_list.objects.all()
+    data = cake_list.objects.filter(is_featured = True).order_by('-id')
     return render(request, 'index1.html',{'data':data})
 
 #Category
